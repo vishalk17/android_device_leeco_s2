@@ -237,5 +237,8 @@ TARGET_OTA_ASSERT_DEVICE := s2,le_s2,le_s2_ww
 #Enable DRM plugins 64 bit compilation
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# Vendor SPL
+VENDOR_SECURITY_PATCH := 2016-12-01
+
 # inherit from the proprietary version
 -include vendor/leeco/s2/BoardConfigVendor.mk

@@ -18,23 +18,23 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit from s2 device
 $(call inherit-product, device/leeco/s2/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := LeEco
 PRODUCT_DEVICE := s2
 PRODUCT_MANUFACTURER := LeMobile
-PRODUCT_NAME := lineage_s2
+PRODUCT_NAME := pa_s2
 
 PRODUCT_GMS_CLIENTID_BASE := android-leeco
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=le_s2_ww \
+    PRODUCT_DEVICE=le_s2_ww \
     PRODUCT_NAME=Le2_WW \
     PRIVATE_BUILD_DESC="s2-user 6.0.1 IIXOSOP5801910121S 44 release-keys"
-
-BUILD_FINGERPRINT := Letv/Le2_WW/le_s2_ww:6.0.1/IIXOSOP5801910121S/44:user/release-keys
