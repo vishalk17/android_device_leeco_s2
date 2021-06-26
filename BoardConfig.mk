@@ -239,5 +239,8 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Vendor SPL
 VENDOR_SECURITY_PATCH := 2016-12-01
 
+# Other
+BUILD_BROKEN_DUP_RULES := true
+
 # inherit from the proprietary version
 -include vendor/leeco/s2/BoardConfigVendor.mk
